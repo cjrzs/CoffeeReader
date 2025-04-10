@@ -1,0 +1,29 @@
+llm:
+  provider: "deepseek"
+  max_requests: 10
+  default_model_index: 1
+  deepseek:
+    api_key: ""
+    base_url: "https://api.deepseek.com"
+    models:
+      - "deepseek-reasoner"
+      - "deepseek-chat"
+    temperature: 0.7
+    max_tokens: 8192
+
+prompts:
+  file: "config/prompt_config.yaml"
+  default: "summary"
+  available:
+    - summary
+    - merge
+    - oral_draft
+
+books:
+  directory: "books"
+  suffix:
+    - txt
+
+output:
+  base_path: "output"
+  default_format: "markdown"
